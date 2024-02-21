@@ -31,13 +31,19 @@ def delete_folder(name: str):
 def rename_file(name: str, new_name: str):
     os.rename(name, new_name)
 
+
 def clear_folder(name: str):
     data = os.listdir(name)
     for file in data:
         os.remove(f'{name}/{file}')
 
+
 def delete_folderAndContents(name:str):
     data = os.listdir(name)
     for file in data:
         os.remove(f'{name}/{file}')
-    os.rmdir(f'{name}')
+    os.rmdir(name)
+
+
+def see_contents(name: str):
+    return os.listdir(name)
