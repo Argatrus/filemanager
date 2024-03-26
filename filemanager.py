@@ -28,6 +28,9 @@ def delete_file(name: str):
 def create_folder(name: str):
     os.mkdir(name)
 
+
+#does something
+
 def delete_folder(name: str):
     try:
         os.rmdir(name)
